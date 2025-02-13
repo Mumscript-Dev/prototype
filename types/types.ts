@@ -28,15 +28,4 @@ export interface Pie {
 	value: number;
 }
 
-export interface Baby {
-	Name: string;
-	Age: number;
-}
-
-export interface Baby2 {
-	Name: string;
-	Age: number;
-	Height: number;
-}
-
 export type Direction = "up" | "down" | "left" | "right";
