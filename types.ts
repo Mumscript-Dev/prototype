@@ -11,4 +11,16 @@ export interface Turtle {
 	Y: number;
 }
 
+export interface Turtle2 {
+	Color: Alpha;
+	Direction: Direction;
+	X: number;
+	Y: number;
+}
+
+export interface User {
+	Name: string;
+	Age: number;
+}
+
 export type Direction = "up" | "down" | "left" | "right";

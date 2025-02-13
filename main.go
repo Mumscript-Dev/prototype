@@ -30,6 +30,16 @@ func main() {
 		Direction Direction
 	}
 
+	type Turtle2 struct {
+		Position  `json:"Coordinates"`
+		Color     color.Alpha
+		Direction Direction
+	}
+
+	type User struct {
+		Name string
+		Age  int
+	}
 	// Open a file for writing
 	file, err := os.Create("types.ts")
 	if err != nil {
@@ -40,6 +50,8 @@ func main() {
 	// Generate TypeScript types
 	generator := go2ts.New()
 	generator.Add(Turtle{})
+	generator.Add(Turtle2{})
+	generator.Add(User{})
 	generator.AddUnion(AllDirections)
-	generator.Render(file) // Write output to file instead of Stdout
+	generator.Render(file) 
 }
