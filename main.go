@@ -41,7 +41,7 @@ func main() {
 		Age  int
 	}
 	// Open a file for writing
-	file, err := os.Create("types.ts")
+	file, err := os.Create("types/types.ts")
 	if err != nil {
 		panic(err)
 	}
