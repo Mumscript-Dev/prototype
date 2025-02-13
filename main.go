@@ -40,6 +40,10 @@ func main() {
 		Name string
 		Age  int
 	}
+	type Pie struct {
+		Title string `json:"title"`
+		Value int    `json:"value"`
+	}
 	// Open a file for writing
 	file, err := os.Create("types/types.ts")
 	if err != nil {
@@ -52,6 +56,7 @@ func main() {
 	generator.Add(Turtle{})
 	generator.Add(Turtle2{})
 	generator.Add(User{})
+	generator.Add(Pie{})
 	generator.AddUnion(AllDirections)
 	generator.Render(file) 
 }
