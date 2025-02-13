@@ -48,6 +48,11 @@ func main() {
 		Name string
 		Age  int
 	}
+	type Baby2 struct {
+		Name string
+		Age  int
+		Height float64
+	}
 	// Open a file for writing
 	file, err := os.Create("types/types.ts")
 	if err != nil {
@@ -62,6 +67,7 @@ func main() {
 	generator.Add(User{})
 	generator.Add(Pie{})
 	generator.Add(Baby{})
+	generator.Add(Baby2{})
 	generator.AddUnion(AllDirections)
 	generator.Render(file) 
 }
